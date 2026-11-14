@@ -32,4 +32,7 @@ public class PROBLEM_NO_345 {
                 c=='A'|| c=='E'|| c=='I'|| c=='O'||c=='U';
     }
 
+
+
+
 }

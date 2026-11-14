@@ -1,6 +1,7 @@
 package SORTING;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class PROBLEM_NO_215 {
     public static void main(String [] args){
@@ -12,6 +13,7 @@ public class PROBLEM_NO_215 {
 
         System.out.println(Find_Kth_Largest(nums1,k1));
         System.out.println(Find_Kth_Largest(nums2,k2));
+        System.out.println(findKth_Largest(nums2,k2));
     }
 
     public static int Find_Kth_Largest(int []nums,int k){
@@ -61,5 +63,18 @@ public class PROBLEM_NO_215 {
             }
         }
         return nums;
+    }
+
+    // solving these problem without using sorting technique
+    public static int findKth_Largest(int [] nums,int k){
+        PriorityQueue<Integer > result = new PriorityQueue<>();
+        for(int arr:nums){
+            result.add(arr);
+
+            if(result.size()>k){
+                result.poll();
+            }
+        }
+        return result.peek();
     }
 }
