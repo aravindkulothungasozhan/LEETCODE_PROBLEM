@@ -1,14 +1,17 @@
 package ARRAY;
 
+import java.util.HashSet;
+
 public class PROBLEM_NO_268 {
     public static void main(String [] args){
         int [] nums1={3,0,1};
         int [] nums2={9,6,4,2,3,5,7,0,1};
         int [] nums3={0,1};
 
-        System.out.println(Missing_Number_Approach_01(nums1));
-        System.out.println(Missing_Number_Approach_02(nums2));
-        System.out.println(Missing_Number_Approach_02(nums3));
+        //System.out.println(Missing_Number_Approach_01(nums1));
+        //System.out.println(Missing_Number_Approach_02(nums2));
+        //System.out.println(Missing_Number_Approach_02(nums3));
+        System.out.println(missingNumber(nums1));
 
     }
 
@@ -76,5 +79,17 @@ public class PROBLEM_NO_268 {
             }
         }
         return nums;
+    }
+    public static int missingNumber(int [] nums){
+        HashSet<Integer> set= new HashSet<>();
+        for(int arr:nums){
+            set.add(arr);
+        }
+        for(int i=0;i<=nums.length;i++){
+            if(!set.contains(i)){
+                return i;
+            }
+        }
+        return -1;
     }
 }
