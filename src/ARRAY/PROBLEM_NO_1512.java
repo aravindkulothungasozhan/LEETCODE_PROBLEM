@@ -8,7 +8,7 @@ public class PROBLEM_NO_1512 {
         int[] nums_01 = new int[]{1, 2, 3, 1, 1, 3};
         int[] nums_02 = new int[]{1, 1, 1, 1};
 
-        System.out.println(numIdenticalPairs(nums_01));
+        System.out.println(numIdenticalPairs_hashmap(nums_01));
         System.out.println(numIdenticalPairs_hashmap(nums_02));
     }
     public static int numIdenticalPairs(int [] nums){
