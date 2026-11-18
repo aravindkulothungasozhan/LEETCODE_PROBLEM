@@ -1,7 +1,7 @@
-package ARRAY;
+package TWO_POINTER;
 
 import java.util.Arrays;
-import java.util.Arrays;
+
 public class PROBLEM_NO_167 {
     public static void main(String [] args){
         int [] nums={2,7,11,15};
